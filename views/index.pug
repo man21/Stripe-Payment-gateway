@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  #pricing.container
+    .text-center
+      h2 Pricing
+      h4 Choose a payment plan that works for you
+    .row.slideanim.justify-content-center
+      each plan in plans
+        .col-sm-4.col-xs-12
+          .panel.panel-default.text-center
+            .panel-heading
+              h1 #{plan.nickname}
+            .panel-body
+              p
+                strong 
+                |  
+              p
+                strong 
+                | 
+              p
+                strong 
+                |  
+              p
+                strong 
+                |  
+              p
+                strong 
+                |  
+            .panel-footer
+              h3 &dollar; #{plan.amount/100}
+              h4 per month
+              form(method="POST")
+                input(type="hidden" name="pid" value=`${plan.id}`)
+                button.btn.btn-lg(type="submit") Sign Up
+      .
+
+              
