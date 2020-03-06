@@ -1,0 +1,7 @@
+name: 'Stripe Payment Gateway'
+description: 'Stripe payment Gateway for nodejs'
+author: 'Mandeep'
+inputs: 
+  myInput:
+    description: 'Input to use'
+    default: 'world'
